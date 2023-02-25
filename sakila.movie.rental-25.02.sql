@@ -32,5 +32,34 @@ date datetime
 
 c) Insert the non active users in the table backup table
 
+CREATE TABLE deleted_users (
+customer_id smallint(5),
+email varchar(175),
+date datetime
+); 
+
+INSERT INTO deleted_users 
+VALUES(16, 'SANDRA.MARTIN@sakilacustomer.org', NOW()),
+(64, 'JUDITH.COX@sakilacustomer.org', NOW()),
+(124, 'SHEILA.WELLS@sakilacustomer.org', NOW()),
+(169, 'ERICA.MATTHEWS@sakilacustomer.org', NOW()),
+(241, 'HEIDI.LARSON@sakilacustomer.org', NOW()),
+(271, 'PENNY.NEAL@sakilacustomer.org', NOW()),
+(315, 'KENNETH.GOODEN@sakilacustomer.org', NOW()),
+(368, 'HARRY.ARCE@sakilacustomer.org', NOW()),
+(406, 'NATHAN.RUNYON@sakilacustomer.org', NOW()),
+(446, 'THEODORE.CULP@sakilacustomer.org', NOW()),
+(482, 'MAURICE.CRAWLEY@sakilacustomer.org', NOW()),
+(510, 'BEN.EASTER@sakilacustomer.org', NOW()),
+(534, 'CHRISTIAN.JUNG@sakilacustomer.org', NOW()),
+(558, 'JIMMIE.EGGLESTON@sakilacustomer.org', NOW()),
+(592, 'TERRANCE.ROUSH@sakilacustomer.org', NOW());
+
+SELECT * FROM deleted_users;
+
+# we run this query to ensure that we implemented the two previous queries correctly (create table and insert intp)
+
 d) Delete the non active users from the table customer
+
+DELETE FROM customer WHERE active = 0; 
 
